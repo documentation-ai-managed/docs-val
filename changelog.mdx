@@ -1,0 +1,131 @@
+---
+title: Changelog
+description: Track the latest updates and improvements to Val.
+---
+
+## Recent Releases
+
+Stay informed about Val's evolution. You receive new features, performance enhancements, and critical fixes through regular releases. Check the [GitHub releases page](https://github.com/val-org/val/releases) for full details and download links.
+
+<Callout kind="info">
+  Val follows semantic versioning (`MAJOR.MINOR.PATCH`). Breaking changes appear in major releases with migration guides.
+</Callout>
+
+<Update label="2024-10-15" description="v1.2.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Added real-time collaboration for documentation editing, allowing multiple users to work simultaneously.
+- Introduced custom themes with your brand color (`#3B82F6`) support via the theme editor.
+- New API endpoints for programmatic doc management: `POST /docs/{projectId}/publish`.
+
+## Improvements
+
+- Enhanced search with fuzzy matching and syntax highlighting for code blocks.
+- Reduced page load times by `>40%` through optimized asset bundling.
+
+## Bug Fixes
+
+- Fixed parsing errors with nested JSX components in MDX files.
+- Resolved authentication issues during webhook deliveries.
+
+```bash
+# Check your version
+val --version
+# Upgrade to latest
+val upgrade
+```
+</Update>
+
+<Update label="2024-09-20" description="v1.1.0" tags={["bugfix", "security"]}>
+
+## Security Fixes
+
+- Patched potential XSS vulnerability in user-generated content rendering (CVE-2024-XXXX).
+- Strengthened API key validation to prevent weak token bypasses.
+
+## Bug Fixes
+
+- Corrected Mermaid diagram rendering when using complex flowcharts.
+- Fixed expandable sections not collapsing on mobile devices.
+- Improved error handling for invalid YAML frontmatter.
+
+## Improvements
+
+- Added keyboard shortcuts: `<kbd>Ctrl</kbd>+<kbd>K</kbd>` for search, `<kbd>Ctrl</kbd>+<kbd>S</kbd>` for quick save.
+
+<CodeGroup tabs="CLI,Dashboard">
+````bash
+val docs lint --fix
+````
+
+````jsx
+// In dashboard: Settings > Diagnostics > Run Lint
+<Callout kind="tip">Use the built-in linter for instant fixes.</Callout>
+````
+</CodeGroup>
+</Update>
+
+<Update label="2024-08-10" description="v1.0.0" tags={["feature", "breaking"]}>
+
+## New Features
+
+- Core documentation engine with MDX v3 support and 15+ UI components.
+- Project organization dashboard at `https://dashboard.example.com`.
+- Initial CLI: `val init`, `val build`, `val deploy`.
+
+## Breaking Changes
+
+- Updated component syntax: Use double quotes for all string attributes.
+- Migrated from v0.x config to new `val.config.js` format.
+
+## Migration Steps
+
+<Steps>
+  <Step title="Backup" icon="database">
+    Export your projects via CLI:
+
+````bash
+val export --all > backup.json
+````
+
+  </Step>
+  <Step title="Update Config" icon="settings">
+
+    Update to new format:
+
+````javascript
+// val.config.js
+export default {
+  brandColor: '#3B82F6',
+  components: { enabled: true }
+};
+````
+
+  </Step>
+  <Step title="Test Build" icon="play">
+    Run `val build --watch` and verify.
+  </Step>
+</Steps>
+
+</Update>
+
+## Upcoming in v1.3.0
+
+Preview what's next. Provide feedback on [GitHub Discussions](https://github.com/val-org/val/discussions).
+
+<Columns cols={3}>
+  <Card title="AI Assistance" icon="bot" href="https://github.com/val-org/val/issues/456">
+    Auto-generate docs from code comments.
+  </Card>
+  <Card title="Versioned Docs" icon="git-branch" href="https://github.com/val-org/val/issues/472">
+    Publish docs per git tag automatically.
+  </Card>
+  <Card title="Advanced Analytics" icon="bar-chart-3" href="https://github.com/val-org/val/issues/489">
+    Track doc views and engagement metrics.
+  </Card>
+</Columns>
+
+<Callout kind="tip">
+  Subscribe to our RSS feed or join the Discord for instant notifications. Star the repo to get release alerts!
+</Callout>

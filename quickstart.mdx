@@ -1,0 +1,135 @@
+---
+title: Getting Started with Val
+description: Set up your Val account and create your first documentation space in just a few minutes.
+---
+
+## Prerequisites
+
+<Callout kind="info">
+
+Before you begin, ensure you have:
+- A modern web browser like Chrome, Firefox, or Safari
+- An active email address for account verification
+- Optional: A Google or GitHub account for faster sign-up
+
+</Callout>
+
+## Create Your Val Account
+
+Sign up takes under 2 minutes. Choose your preferred method below.
+
+<Tabs>
+  <Tab title="Email" icon="mail">
+    Visit [https://app.val.com/signup](https://app.val.com/signup).
+    
+    1. Enter your email and create a password.
+    2. Check your inbox for a verification link.
+    3. Click the link to activate your account.
+    
+    You'll land on the dashboard immediately.
+  </Tab>
+  <Tab title="Google" icon="google">
+    Click "Sign up with Google" on [https://app.val.com/signup](https://app.val.com/signup).
+    
+    Authorize Val to access your basic profile info. No additional permissions required.
+  </Tab>
+  <Tab title="GitHub" icon="github">
+    Select "Sign up with GitHub" on [https://app.val.com/signup](https://app.val.com/signup).
+    
+    Grant repo read access if you plan to import projects later.
+  </Tab>
+</Tabs>
+
+<Callout kind="tip">
+  New accounts include 14 days of full access to all features. Upgrade anytime via the billing section.
+</Callout>
+
+## Navigate the Dashboard
+
+The dashboard provides quick access to your spaces, templates, and settings.
+
+<Columns cols={3}>
+  <Card title="Documentation Spaces" icon="book-open" href="/docs/spaces">
+    View, create, and manage your documentation projects.
+  </Card>
+  <Card title="Templates" icon="layout" href="/docs/templates">
+    Start with pre-built docs for APIs, SDKs, or apps.
+  </Card>
+  <Card title="Settings" icon="settings" href="/docs/settings">
+    Manage account, billing, and integrations.
+  </Card>
+</Columns>
+
+## Set Up Your First Documentation Space
+
+Follow these steps to create and populate your first space.
+
+<Steps>
+  <Step title="Create a New Space" icon="plus">
+    From the dashboard, click **New Space**.
+    
+    Enter a name like "My Project Docs" and select a template (e.g., "API Reference").
+  </Step>
+  <Step title="Add Your First Page" icon="file-text">
+    Inside the space, click **New Page**.
+    
+    Choose "Blank MDX" or a starter like "Introduction".
+  </Step>
+  <Step title="Publish and Share" icon="globe">
+    Toggle **Publish** in the top-right.
+    
+    Copy the shareable URL: `https://docs.val.com/my-project-docs/introduction`.
+  </Step>
+</Steps>
+
+## Basic Project Organization Tips
+
+Organize effectively from day one to scale effortlessly.
+
+<ExpandableGroup>
+  <Expandable title="Folder Structure Best Practices" default-open="true">
+    Use folders for logical grouping:
+    
+    - `/introduction` - Landing page
+    - `/quickstart` - Setup guides
+    - `/api` - Endpoint references
+    - `/faq` - Common questions
+    
+    Drag and drop pages in the sidebar to reorder.
+  </Expandable>
+  <Expandable title="Versioning Workspaces">
+    Create separate spaces for major versions (e.g., "v1-docs", "v2-docs").
+    
+    Use the Versions tab to snapshot changes.
+  </Expandable>
+</ExpandableGroup>
+
+Here's a simple MDX frontmatter example for your pages:
+
+<CodeGroup tabs="MDX">
+  ```mdx
+  ---
+  title: My Page
+  description: Page summary here.
+  ---
+  
+  ## Overview
+  
+  Content starts here.
+  ```
+</CodeGroup>
+
+## Next Steps
+
+<Columns cols={2}>
+  <Card title="Explore Templates" icon="sparkles" href="/docs/templates">
+    Build faster with ready-made docs.
+  </Card>
+  <Card title="Customize Your Brand" icon="palette" href="/docs/branding">
+    Add your logo and colors (like #3B82F6).
+  </Card>
+</Columns>
+
+<Callout kind="success">
+  Congratulations! You've set up Val. Dive into [templates](/docs/templates) next.
+</Callout>

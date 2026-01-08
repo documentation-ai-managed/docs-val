@@ -1,0 +1,100 @@
+---
+title: Introduction to Val
+description: Discover Val, your default documentation space for organizing and managing all your project documentation with ease.
+---
+
+## Overview
+
+Val provides your default documentation space to organize and manage project documentation effortlessly. You create structured guides, API references, and changelogs in one centralized location. Benefit from MDX-powered pages with interactive components like tabs, steps, and cards to enhance user experience.
+
+Val integrates seamlessly with your workflow, supporting version control and collaborative editing. Customize themes using your brand color `#3B82F6` for a professional look.
+
+## Key Features
+
+Val offers powerful tools for documentation management.
+
+<Columns cols={3}>
+  <Card title="Interactive Components" icon="components" href="#interactive-components">
+    Use `<Steps>`, `<Tabs>`, and `<Callout>` to create engaging guides.
+  </Card>
+  <Card title="MDX Syntax" icon="file-text" href="#mdx-syntax">
+    Write rich content with code highlighting and diagrams.
+  </Card>
+  <Card title="Version History" icon="git-branch" href="/changelog">
+    Track changes with `<Update>` components for clear release notes.
+  </Card>
+</Columns>
+
+## Quick Start
+
+Get started with Val in minutes.
+
+<Steps>
+  <Step title="Create Your Space" icon="plus">
+    Sign up at `https://app.val.com` and initialize a new documentation project.
+  </Step>
+  <Step title="Add Your First Page" icon="file-plus">
+    Create `introduction.mdx` with YAML frontmatter.
+  </Step>
+  <Step title="Customize Branding" icon="palette">
+    Set your brand color to `#3B82F6` in theme settings.
+  </Step>
+  <Step title="Publish" icon="upload-cloud">
+    Deploy changes to `https://docs.val.com`.
+  </Step>
+</Steps>
+
+<CodeGroup tabs="MDX Example">
+```mdx
+---
+title: My Page
+description: Page description
+---
+
+## Hello World
+
+Welcome to your first Val page!
+```
+</CodeGroup>
+
+## Brand Guidelines
+
+Follow these guidelines to maintain consistency.
+
+<Callout kind="info">
+  Use the primary brand color `#3B82F6` for headings, links, and accents. Avoid using it for backgrounds to ensure readability. Pair with neutral grays for text.
+</Callout>
+
+For custom CSS, reference the color as `{brandColor: '#3B82F6'}` in your config.
+
+## Navigation
+
+Explore essential sections next.
+
+<Columns cols={2}>
+  <Card title="Quickstart" icon="zap" href="/quickstart">
+    Set up your first documentation site.
+  </Card>
+  <Card title="Authentication" icon="shield" href="/authentication">
+    Secure your docs with API keys.
+  </Card>
+  <Card title="Configuration" icon="settings" href="/configuration">
+    Customize layouts and themes.
+  </Card>
+  <Card title="Changelog" icon="git-commit" href="/changelog">
+    View recent updates.
+  </Card>
+</Columns>
+
+<Tabs>
+  <Tab title="Next Steps" icon="arrow-right">
+    Review [Quickstart](/quickstart) for installation.
+  </Tab>
+  <Tab title="Advanced" icon="code">
+    Dive into [MDX Components](/configuration).
+  </Tab>
+</Tabs>
+
+<Expandable title="Why Choose Val?" default-open="true">
+  Val stands out with its zero-config setup and rich component library. You focus on content while Val handles rendering and hosting.
+</Expandable>
